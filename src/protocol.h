@@ -267,6 +267,13 @@ enum {
     NODE_XTHIN = (1 << 4),
     // BUIP010 - Xtreme Thinblocks - end section
 
+    // Stream encryption - begin section
+    // NODE_ENCRYPT_STREAMS means the node will support encrypted traffic to and from it
+    // If this is turned off the node will not service any encrypted traffic, or offer a key
+    // If this is turned on the node will opportunistically ecncrypt traffic with peers
+    NODE_ENCRYPT_STREAMS = (1 << 31),
+    // Stream encryption - end section
+
     // Bits 24-31 are reserved for temporary experiments. Just pick a bit that
     // isn't getting used, or one not being used much, and notify the
     // bitcoin-development mailing list. Remember that service bits are just
